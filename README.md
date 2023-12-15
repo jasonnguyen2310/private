@@ -20,9 +20,18 @@
 
 # Project begins
 
-## ASK
+## ASK PHASE
 
 ### Questions
 * How do annual members and casual riders use Cyclistic bikes differently?
 * Why would casual riders buy Cyclistic annual memberships?
 * How can Cyclistic use digital media to influence casual riders to become members?
+
+My hypotheical manager asked me to answer the first question
+
+What is the problem you are trying to solve? : I'm trying to differentiate between the casual riders and the annual riders.
+
+## PREPARE PHASE
+* Since this is a hypotheical situation, I'm going to assume that the data is located in the company database (the data is created by Motivate International Inc)
+* The data is organized by the naming convention : YYYYMM-divvy-tripdata. I'm going with the newest set of data in 2023
+* Assuming this is a hypothetical situtation, the data should be ROCCC after the first investigation
