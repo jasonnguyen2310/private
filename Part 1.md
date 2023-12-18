@@ -79,6 +79,37 @@ CREATE TABLE cyclistic.`202301-divvy` LIKE cyclistic.`202212-divvy`;
 ```
 > I did the same with the rest, simply replacing 202301 with 202302, 202303 and beyond.
 
+* Step 7: Combining all the table into 2023_cyclist for more efficient analysis.
+  
+```sql1
+CREATE TABLE IF NOT EXISTS cyclistic.`2023_Cyclist` AS ( 
+	SELECT * FROM cyclistic.`202212-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202301-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202302-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202303-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202304-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202305-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202306-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202307-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202308-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202309-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202310-divvy` 
+	UNION ALL 
+	SELECT * FROM cyclistic.`202311-divvy` 
+);
+```
+I keep getting error 1525 - incorrect date time value when trying to combine all the tables, but after few hours trying to determine what caused the issue, I'm assuming it's the incorrect DATETIME type, even though I created the table with the correct format and this is also true with the data. I bypassed this by using the code below. Will continue to investigate
 
-
-
+```sql1
+SET SESSION SQL_MODE='ALLOW_INVALID_DATES'
+```
