@@ -35,3 +35,7 @@ What is the problem you are trying to solve? : I'm trying to differentiate betwe
 * Since this is a hypothetical situation, I'm going to assume that the data is located in the company database (the data is created by Motivate International Inc)
 * The data is organized by the naming convention : YYYYMM-divvy-tripdata. I'm going with the newest set of data in 2023
 * Assuming this is a hypothetical situtation, the data should be ROCCC after the first investigation
+
+### Data gathering and tools
+
+I will be using SQL for this analysis. Since it's the first time I work with a large data set like this, I had to dig around to find a way to set up SQL workbench. Refer to this <link> to see the details.
